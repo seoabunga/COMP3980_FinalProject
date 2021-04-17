@@ -1,0 +1,22 @@
+Kurt Daniel Milan               A01089090
+Seunghan (Brian) Seo            A01176563
+
+Instructions for setting up the server:
+
+1. Enter the following commands in your terminal to compile using the CMAKE file.
+    mkdir build
+    cd build
+    cmake ..
+    cmake --build .
+
+2. Run the server using the following command in your terminal:
+    ./server
+
+Instructions for setting up the client:
+
+1. Ensure you have python3 installed on your machine using python3 --version.
+2. Run the client file from the directory using the following command(s):
+    Windows: py .\client.py
+    MacOS/Linux: python3 client.py
+3. Have another client to the server.
+4. Have fun lmao

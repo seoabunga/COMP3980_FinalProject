@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/brian/Desktop/Brian/BCIT/Term4/COMP3980/Assignments/COMP3980_TicTacToe/v3.0/server/server.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+netdb.h
+-
+time.h
+-
+

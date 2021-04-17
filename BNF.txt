@@ -1,0 +1,50 @@
+<message> ::= <client_request> | <server_response> | <server_update>
+
+<client_request> ::= <uid> <req_type> <req_context>  <payload_length> <payload>
+<server_response> ::= <status> <req_type> <payload_length> <payload>
+<server_update> ::= <status> <update_context> <payload_length> <payload>
+
+<uid> ::= <byte> <byte> <byte> <byte>
+
+<req_type> ::= <confirmation> | <information> | <meta_action> | <game_action>
+<status> ::= <success> | <update> | <invalid_request> | <invalid_uid> | <invalid_type> | <invalid_context> | <invalid_payload> | <server_error> | <invalid_action> | <action_out_of_turn>
+
+<req_context> ::= <confirm_ruleset> | <make_move> | <quit_game>
+<update_context> ::= <start_game> | <move_made> | <end_of_game> | <opponent_disconnected>
+
+<payload> ::= <byte> | <byte> <payload>
+<payload_length> ::= <byte>
+
+<byte> ::= "2" [0-5] [0-5] | [0-1] [0-9] [0-9]
+
+<confirmation> ::= "1" 
+<information> ::= "2"
+<meta_action> ::= "3"
+<game_action> ::= "4"
+
+<quit_game> ::= "1"
+<confirm_ruleset> ::= "1"
+
+/* TTT: cell in payload, RPS: choice in payload */
+<make_move> ::= "1" 
+
+/* TTT: team in payload, RPS: empty payload */
+<start_game> ::= "1" 
+
+/* TTT: cell in payload, RPS: choice in payload */
+<move_made> ::= "2" 
+
+<end_of_game> ::= "3" 
+
+<opponent_disconnected> ::= "4"
+
+<success> ::= "10"
+<update> ::= "20"
+<invalid_request> ::= "30"
+<invalid_uid> ::= "31"
+<invalid_type> ::= "32"
+<invalid_context> ::= "33"
+<invalid_payload> ::= "34"
+<server_error> ::= "40"
+<invalid_action> ::= "50"
+<action_out_of_turn> ::= "51"
